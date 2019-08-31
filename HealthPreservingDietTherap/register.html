@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #f6f9f9;
+        }
+        /*.header {*/
+        /*    background-color: #E3E4E4;*/
+        /*    height: 88px;*/
+        /*}*/
+         .header {
+            background-color: rgba(157,204,238,0.5);
+            /*width: 100%;*/
+            height: 88px;
+            text-align: center;
+
+            /*display: flex;*/
+            /*flex-direction: row;*/
+        }
+
+        .header img {
+            width: 32px;
+            height: 36px;
+            margin-right: 36px;
+            margin-top: 27px;
+            float: right;
+        }
+
+        .header p {
+            /*font-size: 42px;*/
+            /*font-family: 宋体;*/
+            font: 42px bold black 宋体;
+            line-height: 88px;
+            color: black;
+            margin-right: 10.5px;
+            letter-spacing: 0.1em;
+            float: right;
+        }
+
+        .input {
+            background-color: white;
+            margin: 260px 60px 120px 60px;
+            height: 600px;
+        }
+
+        .input .user {
+            height: 25%;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+        }
+
+        .input .user img {
+            width: 50px;
+            height: 56px;
+            margin: 68px 60px 20px 40px;
+            float: left;
+        }
+
+        .input .user input {
+            width: 70%;
+            border: none;
+            float: left;
+            font: 42px black 宋体;
+            letter-spacing: 0.1em;
+            /*height: 100px;*/
+            margin-top: 74px;
+        }
+
+        .input .phoneNumber {
+            height: 25%;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+        }
+
+        .input .phoneNumber img {
+            width: 50px;
+            height: 56px;
+            margin: 68px 60px 20px 40px;
+            float: left;
+        }
+
+        .input .phoneNumber input {
+            width: 70%;
+            border: none;
+            float: left;
+            font: 42px black 宋体;
+            letter-spacing: 0.1em;
+            /*height: 100px;*/
+            margin-top: 74px;
+        }
+
+        .input .password {
+            height: 25%;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+        }
+
+        .input .password img {
+            width: 50px;
+            height: 56px;
+            margin: 68px 60px 20px 40px;
+            float: left;
+        }
+
+        .input .password input {
+            width: 70%;
+            border: none;
+            float: left;
+            font: 42px black 宋体;
+            letter-spacing: 0.1em;
+            /*height: 100px;*/
+            margin-top: 74px;
+        }
+
+        .input .verificationCode {
+            height: 25%;
+            /*border-bottom: 2px solid rgba(0,0,0,0.25);*/
+        }
+
+        .input .verificationCode .button1 {
+            width: 260px;
+            height: 70px;
+            margin: 60px 60px 20px 40px;
+            font: 40px black 宋体;
+            text-align: center;
+            background: url("img/register_img/button.png");
+            float: left;
+        }
+
+        .input .verificationCode .input1 {
+            width: 50%;
+            border: none;
+            float: left;
+            font: 42px black 宋体;
+            letter-spacing: 0.1em;
+            /*height: 100px;*/
+            margin-top: 74px;
+            margin-left: 40px;
+        }
+
+        .register {
+            margin-top: 120px;
+            width: 100%;
+            height: 100px;
+
+        }
+
+        .register .button2 {
+            width: 60%;
+            font: 42px black 宋体;
+            line-height: 100px;
+            background-color: #6fbcf7;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="gridSystemModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3" style="font: 46px black 宋体;letter-spacing: 0.2em;text-align: center">验证码已发送</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+<!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div>
+
+    <div class="header" align="center">
+
+        <img src="img/register_img/arrowToTheRight.png" alt="箭头向左" onclick="window.location.href='login.html'">
+        <p>登录</p>
+    </div>
+    <div class="body">
+        <div class="input">
+            <div class="user">
+                <img src="img/register_img/user.png" alt="用户名">
+                <input type="text" name="username" placeholder="姓名">
+            </div>
+            <div class="phoneNumber">
+                <img src="img/register_img/phonenumber.png" alt="手机号">
+                <input type="text" name="password" placeholder="手机号(仅支持大陆手机号)">
+            </div>
+            <div class="password">
+                <img src="img/register_img/password.png" alt="密码">
+                <input type="text" name="password" placeholder="密码">
+            </div>
+            <div class="verificationCode">
+                <input type="text" name="verificationCode" placeholder="(验证码)" class="input1">
+                <button class="button1 btn btn-primary" type="button" id="myModal">发送验证码</button>
+            </div>
+        </div>
+        <div class="register" align="center">
+            <button class="button2">
+                注册
+            </button>
+        </div>
+    </div>
+</div>
+<script src="jquery-3.4.1.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/npm.js"></script>
+<script>
+    $('#myModal').click(function () {
+
+
+        // 满足一定条件 弹出模态框
+        $('.modal').modal('show')
+    });
+</script>
+</body>
+</html>

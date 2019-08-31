@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>recipe</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .Add{
+            right: 30px;
+            bottom: 300px;
+            position: fixed;
+        }
+        .Add img{
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            /*background-color: silver;*/
+            border: 3px solid #4DADF7;
+        }
+        .footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 116px;
+            /*background-color: #4DADF7;*/
+            /*clear: both;*/
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border-top: 1px solid rgba(0,0,0,0.5);
+        }
+        .header {
+            width: 100%;
+            height: 88px;
+            background-color: #4DADF7;
+        }
+        .header p{
+            font: 42px black 宋体;
+            line-height: 88px;
+            letter-spacing: 0.1em;
+        }
+        .body{
+            width: 100%;
+            margin-bottom: 200px;
+        }
+        .recipeItem{
+            width: 100%;
+            height: 600px;
+            margin-top: 60px;
+        }
+        .recipeItem .headline{
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+        }
+        .headline p{
+            font: 42px black 宋体;
+            line-height: 100px;
+            margin-left: 40px;
+        }
+        .headline img{
+            width: 36px;
+            height: 36px;
+            margin-top: 32px;
+            margin-left: 700px;
+        }
+        .recipeItem .recipeDetail{
+            margin: 0 40px;
+            height: 500px;
+            border: 5px solid #b9ddf9;
+        }
+        .recipeDetail .label{
+            /*min-height: 40%;*/
+            height: 100%;
+            width: 100%;
+        }
+        .labelDetail{
+            /*float: left;*/
+            width: 100%;
+            /*height: 200px;*/
+            height: 30%;
+        }
+        .labelDetail .addImg1{
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-left: 60px;
+            margin-top: 26px;
+            border: 5px solid #4DADF7;
+            border-radius: 50%;
+        }
+        .labelDetail .labelDetail2{
+            margin-top: 20px;
+            margin-left: 30px;
+            float: left;
+        }
+        .labelDetail .labelDetail2 p{
+            padding: 10px;
+            font: 32px black 宋体;
+            letter-spacing: 0.1em;
+            float: left;
+            border-radius: 20%;
+            border: 2px solid black;
+        }
+        .labelDetail .labelDetail2 img{
+            width: 28px;
+            height: 28px;
+            margin-left: 12px;
+            margin-top: 16px;
+            float: left;
+        }
+        .foodDetail{
+            margin-top: 20px;
+            height: 40%;
+        }
+        .foodDetail .addImg2{
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin-left: 40px;
+            margin-top: 14px;
+            border: 5px solid #4DADF7;
+            border-radius: 50%;
+        }
+        .foodDetail .foodDetail2{
+            float: left;
+            /*margin-left:0;*/
+            margin-bottom: 10px;
+        }
+        .foodDetail2 p{
+            font: 46px black 宋体;
+            padding: 10px;
+            border: 2px solid black;
+            margin-left: 40px;
+            float: left;
+        }
+        .foodDetail2 img{
+            height: 40px;
+            width: 40px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        .remainDays{
+            height: 60px;
+
+        }
+        .remainDays p{
+            font: 32px black 宋体;
+            line-height: 60px;
+            /*padding: 5px 10px;*/
+            padding-left: 80%;
+            /*border: 2px solid black;*/
+            /*border-radius: 20%;*/
+        }
+        .footer .index{
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*width: 100%;*/
+            /*height: 116px;*/
+
+            display: flex;
+            flex-direction: column;
+
+            margin-left: 10%;
+            padding-top: 15px;
+        }
+        .img4{
+            width: 65px;
+            height: 75px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .index a{
+            font-size: 30px;
+            color: black;
+            font-family: 宋体;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .recipe{
+            display: flex;
+            flex-direction: column;
+            margin: 0 30%;
+            padding-top: 15px;
+        }
+        .recipe a{
+            font-size: 30px;
+            color: black;
+            font-family: 宋体;
+
+
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .mine{
+            display: flex;
+            flex-direction: column;
+            /*margin-right: 10%;*/
+            padding-top: 15px;
+        }
+        .mine a{
+            font-size: 30px;
+            color: black;
+            font-family: 宋体;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="Add">
+        <a href="#">
+            <img src="img/recipe_img/bigAdd.png" alt="添加食谱">
+        </a>
+    </div>
+    <div class="header" align="center">
+        <p>食谱</p>
+    </div>
+
+    <div class="body">
+
+        <div class="recipeItem">
+            <div class="headline">
+                <p>食谱 <span>一</span> :</p>
+                <img src="img/recipe_img/bigDelete.png" alt="删除食谱">
+            </div>
+            <div class="recipeDetail">
+<!--                <div class="label">-->
+                    <div class="labelDetail">
+
+                        <div class="labelDetail2">
+                            <p>降暑</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+
+                        <div class="labelDetail2">
+                            <p>清热</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+
+                        <div class="labelDetail2">
+                            <p>健脾</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+
+                        <img src="img/recipe_img/smallAdd.png" alt="添加状态标签" class="addImg1">
+                    </div>
+<!--                </div>-->
+                <div class="foodDetail">
+                    <div class="foodDetail2">
+                        <p>南瓜粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+                    <div class="foodDetail2">
+                        <p>小米粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+                    <div class="foodDetail2">
+                        <p>八宝粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+<!--                    <img src="img/recipe_img/smallAdd.png" alt="添加状态标签" class="addImg2">-->
+                </div>
+                <div class="remainDays">
+                        <p>剩余 <span>6</span> 天</p>
+                </div>
+            </div>
+        </div>
+
+<!--        第二张食谱-->
+                <div class="recipeItem">
+            <div class="headline">
+                <p>食谱 <span>二</span> :</p>
+                <img src="img/recipe_img/bigDelete.png" alt="删除食谱">
+            </div>
+
+            <div class="recipeDetail">
+
+<!--                <div class="label">-->
+                    <div class="labelDetail">
+                        <div class="labelDetail2">
+                            <p>降暑</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+                        <div class="labelDetail2">
+                            <p>清热</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+                        <div class="labelDetail2">
+                            <p>健脾</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+                        <img src="img/recipe_img/smallAdd.png" alt="添加状态标签" class="addImg1">
+                    </div>
+<!--                </div>-->
+
+                <div class="foodDetail">
+                    <div class="foodDetail2">
+                        <p>南瓜粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+                    <div class="foodDetail2">
+                        <p>小米粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+                    <div class="foodDetail2">
+                        <p>八宝粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+<!--                    <img src="img/recipe_img/smallAdd.png" alt="添加状态标签" class="addImg2">-->
+                </div>
+                <div class="remainDays">
+                        <p>剩余 <span>6</span> 天</p>
+                </div>
+            </div>
+        </div>
+
+<!--        第三张食谱-->
+        <div class="recipeItem">
+            <div class="headline">
+                <p>食谱 <span>三</span> :</p>
+                <img src="img/recipe_img/bigDelete.png" alt="删除食谱">
+            </div>
+            <div class="recipeDetail">
+<!--                <div class="label">-->
+                    <div class="labelDetail">
+                        <div class="labelDetail2">
+                            <p>降暑</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+                        <div class="labelDetail2">
+                            <p>清热</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+                        <div class="labelDetail2">
+                            <p>健脾</p>
+                            <img src="img/recipe_img/smallDelete.png" alt="删除状态标签">
+                        </div>
+                        <img src="img/recipe_img/smallAdd.png" alt="添加状态标签" class="addImg1">
+                    </div>
+<!--                </div>-->
+                <div class="foodDetail">
+                    <div class="foodDetail2">
+                        <p>南瓜粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+                    <div class="foodDetail2">
+                        <p>小米粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+                    <div class="foodDetail2">
+                        <p>八宝粥</p>
+                        <img src="img/recipe_img/smallDelete.png" alt="删除食物">
+                    </div>
+<!--                    <img src="img/recipe_img/smallAdd.png" alt="添加状态标签" class="addImg2">-->
+                </div>
+                <div class="remainDays">
+                        <p>剩余 <span>6</span> 天</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="index" align="center">
+<!--            <img src="img/index_img/index3.png" alt="首页" class="img4">-->
+<!--            <a href="index.html">首页</a>-->
+            <a href="index.html">
+                <img src="img/recipe_img/index4.png" alt="首页" class="img4">
+
+            </a>
+        </div>
+
+        <div class="recipe" align="center">
+            <a href="recipe.html">
+                <img src="img/recipe_img/recipe4.png" alt="食谱" class="img4">
+            </a>
+        </div>
+
+        <div class="mine">
+            <a href="mine.html">
+                <img src="img/recipe_img/mine4.png" alt="我的" class="img4">
+            </a>
+        </div>
+    </div>
+</div>
+<script src="jquery-3.4.1.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/npm.js"></script>
+<script>
+    // 点击 大+ 号，可以创建食谱框架
+    // 点击 小+ 号，可以创建标签，食物
+
+    // 点击 大× 号，可以删除食谱
+    // 点击 小× 号，可以删除标签，食物
+</script>
+</body>
+</html>

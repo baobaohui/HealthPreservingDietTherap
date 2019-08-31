@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #f6f9f9;
+        }
+         .header {
+            background-color: rgba(157,204,238,0.5);
+            /*width: 100%;*/
+            height: 88px;
+            text-align: center;
+
+            /*display: flex;*/
+            /*flex-direction: row;*/
+        }
+
+        .header img {
+            width: 32px;
+            height: 36px;
+            margin-right: 36px;
+            margin-top: 27px;
+            float: right;
+        }
+
+        .header p {
+            /*font-size: 42px;*/
+            /*font-family: 宋体;*/
+            font: 42px bold black 宋体;
+            line-height: 88px;
+            color: black;
+            margin-right: 10.5px;
+            letter-spacing: 0.1em;
+            float: right;
+        }
+        .body{
+            width: 100%;
+            /*min-height: 100%;*/
+            /*background-color: #f6f9f9;*/
+        }
+        .avatar{
+            /*margin: 150px 0 110px 0;*/
+            padding: 150px 0 110px 0;
+        }
+        .avatar img{
+            height: 320px;
+            width: 320px;
+            border-radius: 50%;
+        }
+        .input{
+            background-color: white;
+            margin: 0 60px 120px 60px;
+            height: 300px;
+        }
+        .input .user{
+            height: 50%;
+            border-bottom: 2px solid rgba(0,0,0,0.25);
+        }
+        .input .user img{
+            width: 50px;
+            height: 56px;
+            margin: 68px 60px 20px 40px;
+            float: left;
+        }
+        .input .user input{
+            border: none;
+            float: left;
+            font: 42px black 宋体;
+            letter-spacing: 0.1em;
+            /*height: 100px;*/
+            margin-top: 74px;
+        }
+        .input .password{
+            height: 50%;
+        }
+        .input .password img{
+            width: 50px;
+            height: 56px;
+            margin: 68px 60px 20px 40px;
+            float: left;
+        }
+        .input .password input{
+            border: none;
+            float: left;
+            font: 42px black 宋体;
+            letter-spacing: 0.1em;
+            /*height: 100px;*/
+            margin-top: 74px;
+        }
+        .login{
+            width: 100%;
+        }
+        .login input{
+            width: 80%;
+            height: 100px;
+            font: 42px black 宋体;
+            background-color: #6fbcf7;
+            box-shadow: -10px 20px 20px white;
+            /*background: url("img/login_img/button.png");*/
+        }
+        .forgetPassword{
+            margin-top: 40px;
+            width: 100%;
+            text-align: center;
+        }
+        .forgetPassword p{
+            font: 32px silver 宋体;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="header" align="center">
+
+        <img src="img/register_img/arrowToTheRight.png" alt="箭头向左" onclick="window.location.href='register.html'">
+        <p>注册</p>
+    </div>
+    <div class="body">
+        <div class="avatar" align="center">
+            <img src="img/login_img/avatar.png" alt="用户头像">
+        </div>
+        <div class="input">
+            <div class="user">
+                <img src="img/login_img/user.png" alt="用户名">
+                <input type="text" name="username" placeholder="账号或者手机号码">
+            </div>
+            <div class="password">
+                <img src="img/login_img/password.png" alt="密码">
+                <input type="text" name="password" placeholder="密码">
+            </div>
+        </div>
+        <div class="login" align="center">
+            <input type="button" value="登录">
+        </div>
+        <div class="forgetPassword">
+            <p onclick="window.location.href='forgetPassword.html'">忘记密码</p>
+        </div>
+
+    </div>
+</div>
+<script src="jquery-3.4.1.js"></script>
+<script>
+
+</script>
+</body>
+</html>

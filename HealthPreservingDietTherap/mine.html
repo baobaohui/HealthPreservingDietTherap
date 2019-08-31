@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mine</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 116px;
+            /*background-color: #4DADF7;*/
+            /*clear: both;*/
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border-top: 1px solid rgba(0,0,0,0.5);
+        }
+        .header {
+            width: 100%;
+            height: 88px;
+            background-color: #4DADF7;
+        }
+        .header2 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .header2 .avatar {
+            margin: 0 auto;
+        }
+        .header2 .avatar img {
+            width: 222px;
+            height: 222px;
+            border-radius: 100%;
+            padding-top: 68px;
+            padding-bottom: 32px;
+        }
+        /*.header2 .pointLogin {*/
+        /*    margin: 0 auto;*/
+        /*}*/
+        .pointLogin {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 90px;
+        }
+        .pointLogin a{
+            text-decoration: none;
+            color:  black;
+        }
+        .pointLogin p {
+            font-size: 35px;
+            font-family: 宋体;
+            letter-spacing: 0.02em;
+            margin: 0 auto;
+        }
+
+        /*.pointLogin img{*/
+        /*    margin: 0 auto;*/
+        /*}*/
+        .body {
+            /*width: 100%;*/
+            height: 692px;
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: #fafafa;
+            border-radius: 5%;
+        }
+
+        .body .myFootprint {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 110px;
+        }
+
+        .img1 {
+            height: 40px;
+            width: 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 50px;
+            /*vertical-align: middle;*/
+            /*display: inline-block;*/
+        }
+
+        .a1 {
+            color: black;
+            font-size: 37.5px;
+            font-family: 宋体;
+            letter-spacing: 0.05em;
+            margin-top: 52.5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .img2 {
+            height: 30px;
+            width: 25px;
+            margin-left: 650px;
+            margin-right: 15px;
+            margin-top: 55px;
+        }
+
+        .bottomline {
+            margin-left: 80px;
+            border: 1px solid black;
+            opacity: 0.5;
+        }
+
+        .myCollection {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 110px;
+        }
+
+        .setting {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 110px;
+        }
+        /*设置如果更改为两个字长 就要重新设置 margin-left*/
+        /*.setting .img3{*/
+        /*    height: 30px;*/
+        /*    width: 25px;*/
+        /*    margin-left: 700px;*/
+        /*    margin-right: 15px;*/
+        /*    margin-top: 55px;*/
+        /*}*/
+        .footer .index{
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*width: 100%;*/
+            /*height: 116px;*/
+
+            display: flex;
+            flex-direction: column;
+
+            margin-left: 10%;
+            padding-top: 15px;
+        }
+        .img4{
+            width: 65px;
+            height: 75px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .index a{
+            font-size: 30px;
+            color: black;
+            font-family: 宋体;
+
+
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .recipe{
+            display: flex;
+            flex-direction: column;
+
+            margin: 0 30%;
+
+            padding-top: 15px;
+        }
+        .recipe a{
+            font-size: 30px;
+            color: black;
+            font-family: 宋体;
+
+
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .mine{
+            display: flex;
+            flex-direction: column;
+
+            /*margin-right: 10%;*/
+            padding-top: 15px;
+        }
+        .mine a{
+            font-size: 30px;
+            color: black;
+            font-family: 宋体;
+
+
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div style="height: 100%;width: 100%">
+    <div class="header"></div>
+
+    <div class="header2">
+        <div class="avatar">
+            <img src="img/mine_img/avatar.png" alt="头像">
+        </div>
+        <div class="pointLogin">
+            <p>
+                <a href="login.html">点击登录</a>
+                <a href="login.html">
+                    <img src="img/mine_img/arrowToTheRight3.png" alt="箭头向右" width="25px" height="30px">
+                </a>
+            </p>
+
+        </div>
+    </div>
+    <div class="body">
+        <div class="myFootprint">
+            <img src="img/mine_img/myFootprint3.png" alt="我的足迹" class="img1">
+
+            <a href="myFootprint.html" class="a1">我的足迹</a>
+            <img src="img/mine_img/arrowToTheRight3.png" alt="箭头向右" class="img2">
+        </div>
+        <div class="bottomline">
+        </div>
+        <div class="myCollection">
+            <img src="img/mine_img/myCollection3.png" alt="我的收藏" class="img1">
+
+            <a href="myCollection.html" class="a1">我的收藏</a>
+            <img src="img/mine_img/arrowToTheRight3.png" alt="箭头向右" class="img2">
+        </div>
+        <div class="bottomline">
+        </div>
+        <div class="setting">
+            <img src="img/mine_img/setting3.png" alt="我的设置" class="img1">
+
+            <a href="setting.html" class="a1">我的设置</a>
+            <img src="img/mine_img/arrowToTheRight3.png" alt="箭头向右" class="img2">
+        </div>
+        <div class="bottomline">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="index" align="center">
+<!--            <img src="img/index_img/index3.png" alt="首页" class="img4">-->
+<!--            <a href="index.html">首页</a>-->
+            <a href="index.html">
+                <img src="img/index_img/index4.png" alt="首页" class="img4">
+
+            </a>
+        </div>
+        <div class="recipe" align="center">
+            <a href="recipe.html">
+                <img src="img/index_img/recipe4.png" alt="食谱" class="img4">
+            </a>
+        </div>
+        <div class="mine">
+            <a href="mine.html">
+                <img src="img/index_img/mine4.png" alt="我的" class="img4">
+            </a>
+        </div>
+    </div>
+</div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

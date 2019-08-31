@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            width: 100%;
+            height: 88px;
+            background-color: #4DADF7;
+            /*display: flex;*/
+            /*flex-direction: row;*/
+        }
+        .header a {
+            text-decoration: none;
+            color: black;
+        }
+        .header img {
+            height: 38px;
+            width: 28px;
+            float: left;
+            margin-left: 36px;
+            margin-top: 23px;
+        }
+        .body{
+            background-color: #f4f4f4;
+        }
+        .feedbackStyle{
+            margin-top: 80px;
+            /*background-color: yellow;*/
+            background-color: #fff;
+            /*border-top: 3px solid #022139;*/
+            /*border-bottom: 3px solid #022139;*/
+            /*box-shadow:5px 5px 5px #000,
+            5px -5px 5px #000,
+            -5px 5px 5px #000,
+            -5px -5px 5px #000;*/
+/*            box-shadow: 5px 5px 5px white,
+            5px -5px 5px white,
+            -5px 10px 30px #022139,
+            -5px -5px 5px white;*/
+            box-shadow: -5px 10px 30px #022139;
+
+
+        }
+        .p1{
+            font-size: 44px;
+            font-family: 宋体;
+            letter-spacing: 0.06em;
+            padding-top: 36px;
+            margin: 0 0 26px 26px;
+        }
+        .check{
+            font-size: 36px;
+            font-family: 宋体;
+        }
+        .check input{
+            margin-left: 80px;
+            margin-bottom: 20px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50px;
+            /*visibility: hidden;*/
+            /*background: url("img/feedback_img/check.png") no-repeat;*/
+        }
+        /*.check input:active{*/
+        /*    background: url("img/feedback_img/checked.png") no-repeat;*/
+        /*}*/
+        .check input:checked{
+            color: yellow;
+        }
+        .feedbackContent{
+            background-color: #ffffff;
+            margin-top: 80px;
+            box-shadow: -5px 10px 30px #022139;
+        }
+        .feedbackContent .p2{
+            font-size: 44px;
+            font-family: 宋体;
+            letter-spacing: 0.06em;
+            padding-top: 26px;
+            margin: 0 0 26px 26px;
+        }
+        .feedbackContent textarea{
+            width: 100%;
+            height: 300px;
+            /*去除 谷歌中两个横竖线*/
+            font-size: 28px;
+            /*word-spacing: 0.2em;*/
+            letter-spacing: 0.1em;
+            text-indent: 26px;
+            resize: none;
+            border: none;
+        }
+        .contact{
+            width: 100%;
+            height: 300px;
+            background-color: #ffffff;
+            margin-top: 80px;
+            box-shadow: -5px 5px 30px #022139;
+        }
+        .contact .email{
+            margin-left: 48px;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid rgba(0,0,0,0.5);
+        }
+        .contact p{
+            margin-top: 60px;
+            font-size: 36px;
+            font-family: 宋体;
+        }
+        .contact input{
+            border: none;
+            width: 60%;
+            height: 80px;
+            margin-top: 40px;
+            margin-left: 20px;
+            font-size: 36px;
+            font-family: 宋体;
+            color: yellow;
+        }
+        .contact .anycontact{
+            margin-left: 48px;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid rgba(0,0,0,0.5);
+        }
+        .button{
+            margin-top: 100px;
+        }
+        .button input{
+            background: url("img/feedback_img/submit3.png");
+            height: 128px;
+            width: 300px;
+            font-size: 48px;
+            font-family: 宋体;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="header">
+        <a href="setting.html">
+            <img src="img/setting_img/arrowToTheLeft4.png" alt="箭头向左">
+        </a>
+    </div>
+    <div class="body">
+        <div class="feedbackStyle">
+            <p class="p1">你的意见反馈:</p>
+            <div class="check">
+                <input type="radio" name="items" value="咨询d" style="border-radius: 10%"> 咨询
+                <input type="radio" name="items" value="建议"> 建议
+                <input type="radio" name="items" value="其他"> 其他
+            </div>
+        </div>
+<!--        <canvas id="canvas1" width="100%" height="100%" style="border: 3px solid #022139">
+
+        </canvas>-->
+        <div class="feedbackContent">
+            <p class="p2">意见反馈:</p>
+            <textarea name="textarea" id="textarea1" cols="15" rows="20" placeholder="请输入你的意见"></textarea>f
+        </div>
+        <div class="contact">
+            <div class="email">
+                <p>邮箱:</p>
+                <input type="email" name="email" placeholder="以便我们给你答复">
+            </div>
+            <div class="anycontact">
+                <p>其他联系方式:</p>
+                <input type="text" name="qqphone" placeholder="手机号码或QQ">
+            </div>
+        </div>
+    </div>
+    <div class="button" align="center">
+            <input type="submit" value="提交">
+    </div>
+</div>
+
+
+<script src="jquery-3.4.1.js"></script>
+<script>
+/*    var c=document.getElementById("canvas1");
+    var cxt=c.getContext("2d");
+    var grd=cxt.createLinearGradient(0,0,20,20);
+    grd.addColorStop(0,"#022139");
+    grd.addColorStop(1,"#082134");
+    cxt.fillStyle=grd;
+    cxt.fillRect(0,0,50,50);*/
+</script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>foodDetail</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html body{
+            height: 100%;
+            width: 100%;
+            background: -webkit-linear-gradient(left bottom,#c7e7f8,white); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(top right,#c7e7f8, white); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(top right,#c7e7f8, white); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to top right, #c7e7f8, white); /* 标准的语法 */
+
+        }
+        .header {
+            /*background-color: #9dccee;*/
+            /*opacity: 0.5;*/
+            background-color: rgba(157,204,238,0.5);
+            /*width: 100%;*/
+            height: 88px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        .header img {
+            width: 32px;
+            height: 36px;
+            margin-left: 36px;
+            margin-top: 25px;
+            /*float: left;*/
+        }
+
+        .header p {
+            /*font-size: 42px;*/
+            /*font-family: 宋体;*/
+            font: 42px bold black 宋体;
+            line-height: 88px;
+            color: black;
+            margin-left: 33.43%;
+            letter-spacing: 0.1em;
+            /*float: left;*/
+        }
+        .body {
+            /*background-color: #c7e7f8;*/
+            width: 100%;
+            height: 1620px;
+            /*height: 800px;*/
+            /*background: linear-gradient(left,#c7e7f8,#D9ECF8);*/
+/*            background: -webkit-linear-gradient(left bottom,#c7e7f8,white); !* Safari 5.1 - 6.0 *!
+            background: -o-linear-gradient(top right,#c7e7f8, white); !* Opera 11.1 - 12.0 *!
+            background: -moz-linear-gradient(top right,#c7e7f8, white); !* Firefox 3.6 - 15 *!
+            background: linear-gradient(to top right, #c7e7f8, white); !* 标准的语法 *!
+    */    }
+        .foodName{
+            margin: 40px;
+
+            height: 80px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .foodName p{
+            font-size: 36px;
+            font-family: 宋体;
+            line-height: 80px;
+            letter-spacing: 0.1em;
+        }
+        .foodImage{
+            display: flex;
+            flex-direction: row;
+            background-color: #dbf8ff;
+            /*background-color: #fff;*/
+            /*border: 2px solid rgba(219,248,255,0.5);*/
+            margin: 40px 40px 80px 40px;
+            height: 400px;
+            box-shadow: -5px 10px 30px #fff;
+        }
+        .foodImage img{
+            height: 100%;
+            width: 60%;
+        }
+        .foodImage .label{
+            height: 100%;
+            margin-left: 40px;
+        }
+        .foodImage p{
+            font: 36px black 宋体;
+        }
+        .headline{
+            text-align: center;
+        }
+        .headline2{
+            font: 42px black 宋体;
+            letter-spacing: 0.1em;
+            vertical-align: middle;
+        }
+        .line{
+            display: inline-block;
+            width: 40%;
+            border-top: 3px solid #ccc;
+        }
+        .foodPractice{
+            margin: 40px 40px 0 40px;
+            background-color: #dbf8ff;
+            height: 400px;
+            box-shadow: -5px 10px 30px #fff;
+        }
+        .foodPractice .step{
+            /*margin-top: 40px;*/
+            height: 400px;
+            width: 100%;
+            padding: 40px 0 0 40px;
+        }
+        .foodPractice .step p{
+            font: 36px black 宋体;
+            line-height: 60px;
+            letter-spacing: 0.1em;
+        }
+        .boderline1{
+            margin-top: 120px;
+            text-align: center;
+        }
+        .boderline2{
+            display: inline-block;
+            width: 90%;
+            border-top: 3px solid black;
+        }
+        .likeCollection{
+            margin-top: 26px;
+        }
+        .likeCollection img{
+            width: 60px;
+            height: 60px;
+            margin-right: 40px;
+            float: right;
+        }
+/*
+        .likeCollection .praise{
+            float: right;
+        }
+        .likeCollection .stepon{
+            float: right;
+        }
+        .likeCollection .collection{
+            float: right;
+        }
+*/
+
+    </style>
+</head>
+<body>
+<div style="min-height: 100%">
+    <div class="header" align="center">
+        <img src="img/foodDetail_img/arrowToTheLeft4.png" alt="箭头向左">
+        <p>食物详情</p>
+    </div>
+    <div class="body">
+        <div class="foodName" align="center">
+            <p>皮蛋瘦肉粥</p>
+        </div>
+        <div class="foodImage">
+            <img src="img/mine_img/avatar.png" alt="皮蛋瘦肉粥" id="foodImg">
+            <div class="label" id="effect">
+                <p>降火</p>
+                <p>健脾</p>
+                <p>健胃</p>
+                <p>清热</p>
+                <p>降暑</p>
+            </div>
+        </div>
+        <div class="headline">
+            <span class="line"></span>
+            <span class="headline2">做法</span>
+            <span class="line"></span>
+        </div>
+        <div class="foodPractice">
+            <div class="step" id="step">
+                <p>1,洗干净;</p>
+                <p>2,放入锅中;</p>
+                <p>3,加热;</p>
+                <p>4,小火慢炖;</p>
+                <p>5,6分钟后盛出;</p>
+            </div>
+        </div>
+        <div class="boderline1">
+            <span class="boderline2"></span>
+        </div>
+        <div class="likeCollection">
+            <img src="img/foodDetail_img/collection1.png" alt="收藏" class="collection" id="collectionImg">
+<!--            <img src="img/foodDetail_img/stepon.png" alt="踩" class="stepon">-->
+<!--            <img src="img/foodDetail_img/praise.png" alt="点赞" class="praise">-->
+        </div>
+    </div>
+</div>
+
+<script src="jquery-3.4.1.js"></script>
+<script>
+/*
+
+    // 页面加载时更改内容
+    // 1，获取所点击食物的信息
+
+    // 2，动态更改该页面中的内容
+
+    // 更改食物名称
+    $('.foodName').find('p').first().html(data.);
+
+    // 更改食物图片
+    $('#foodImg').attr('src')=data.
+
+    // 更改食物功效(多条食物功效)
+    var effects = document.getElementById("effect").getElementsByTagName("p");
+    for(i=0;i<effects.length;i++)
+    {
+        effects[i].innerHTML=data. // 更改内容
+    }
+
+    // 更改做法(多个步骤)
+    var effects = document.getElementById("step").getElementsByTagName("p");
+    for(i=0;i<effects.length;i++)
+    {
+        effects[i].innerHTML=data. // 更改内容
+    }
+*/
+
+    // 内容加载完毕后，点击收藏按钮，更换图片，并且在 收藏页面中显示
+
+    // 1,更换图片
+    $('.collection').click(function () {
+        var src1 ="img/foodDetail_img/collection1.png";
+        var src2 ="img/foodDetail_img/collection2.png";
+        // alert("图片更换")
+        if ($('.collection').attr('src')==src1)
+            $('.collection').attr("src",src2);
+        else if ($('.collection').attr('src')==src2) 
+            $('.collection').attr("src",src1);
+    });
+    // 2,和收藏页面相关联
+
+
+
+    // 头部箭头 返回上一级页面，所以上一级的地址要传过来
+    // document.querySelector('.header').find('img').attr('src').= data.
+
+
+</script>
+</body>
+</html>
